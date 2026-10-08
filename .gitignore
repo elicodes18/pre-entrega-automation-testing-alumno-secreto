@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+
+# Copia local de la consigna. No forma parte de la entrega.
+instrucciones.pdf
+
+# El reporte versionado es reports/reporte.html.
+# Si se corre el comando de la consigna, este archivo se regenera en la raíz.
+/reporte.html
+/assets/
+
+# Capturas y logs se generan al ejecutar. Las capturas de un fallo
+# quedan en reports/capturas/ para revisarlas en la máquina local.
+reports/capturas/*.png
+reports/*.log
