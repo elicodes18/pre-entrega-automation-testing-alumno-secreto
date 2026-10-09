@@ -1,1 +1,1 @@
-"""Casos de la pre-entrega. Cada archivo se puede correr por separado."""
+"""Casos de la pre-entrega. Cada archivo se puede ejecutar por separado."""

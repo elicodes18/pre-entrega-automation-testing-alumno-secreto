@@ -24,7 +24,7 @@ def crear_driver():
     """Abre Chrome, Brave o Firefox. Si hay Chrome, usa ese.
 
     NAVEGADOR=chrome|brave|firefox elige uno.
-    MOSTRAR_NAVEGADOR=1 muestra la ventana. Si no está, la prueba corre sin ventana.
+    MOSTRAR_NAVEGADOR=1 muestra la ventana. Si no está, la prueba se ejecuta sin ventana.
     """
     pedido = os.getenv("NAVEGADOR", "auto").strip().lower()
     mostrar = _quiere_ver_el_navegador()
@@ -52,7 +52,7 @@ def crear_driver():
     if _hay_firefox():
         return _crear_firefox(mostrar)
     raise RuntimeError(
-        "No hay Chrome, Brave ni Firefox. Instalá uno para correr las pruebas."
+        "No hay Chrome, Brave ni Firefox. Instalá uno para ejecutar las pruebas."
     )
 
 

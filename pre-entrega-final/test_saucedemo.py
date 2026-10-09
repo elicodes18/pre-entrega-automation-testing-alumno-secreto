@@ -1,7 +1,7 @@
 """Archivo de entrada que indica la consigna para el reporte HTML.
 
 Los casos están en tests/ y las funciones auxiliares, en utils/.
-Desde este módulo se corre:
+Desde este módulo se ejecuta:
 
     pytest pre-entrega-final/test_saucedemo.py -v --html=reporte.html --self-contained-html
 """

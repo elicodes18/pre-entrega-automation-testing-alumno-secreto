@@ -66,7 +66,7 @@ pip install -r requirements.txt
 
 ## Cómo ejecutar las pruebas
 
-Corré las pruebas desde la raíz del proyecto.
+Ejecutá las pruebas desde la raíz del proyecto.
 
 Comando de la consigna. Deja `reporte.html` en la raíz:
 
@@ -117,7 +117,7 @@ NAVEGADOR=chrome pytest tests/ -v
 
 ## Reporte y evidencias
 
-- `reports/reporte.html` es el reporte HTML de una corrida correcta.
+- `reports/reporte.html` es el reporte HTML de una ejecución correcta.
 - Si una prueba falla, la captura queda en `reports/capturas/<nombre-de-la-prueba>.png`.
 - El nombre y el precio del primer producto salen en la salida de Pytest y en el detalle de `test_primer_producto_tiene_nombre_y_precio`.
 
@@ -125,8 +125,6 @@ Las credenciales no son un secreto: son el usuario público de la demo de Sauce 
 
 ## Anonimato de los commits
 
-Los commits figuran a nombre de **Alumno Secreto** (`alumno.secreto@anon.local`). Ese correo no corresponde a ninguna cuenta personal.
+Hace más de diez años que evito publicar datos personales en GitHub, y no voy a empezar ahora. Lo que había que aclarar ya está en las notas de AV: el profesor las vio.
 
-En un repositorio público, el nombre y el correo de cada commit quedan a la vista. Si el correo es el de GitHub, el commit se asocia al perfil y el nombre real termina en el historial aunque el código no lo mencione. Conviene separarlo: la cursada identifica la entrega por el repositorio, y el historial no publica un nombre ni un correo personales.
-
-Esa identidad está configurada solo en esta carpeta. No cambia la configuración global de Git. Los commits que se hagan en este repositorio salen con el mismo nombre.
+Por eso esta pre-entrega figura a nombre de **Alumno Secreto** (`alumno.secreto@anon.local`), con un correo que no es personal. Esa identidad está configurada solo en esta carpeta y no cambia la de Git en el resto de la máquina.

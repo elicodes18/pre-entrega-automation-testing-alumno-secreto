@@ -8,11 +8,11 @@ __pycache__/
 instrucciones.pdf
 
 # El reporte versionado es reports/reporte.html.
-# Si se corre el comando de la consigna, este archivo se regenera en la raíz.
+# Si se ejecuta el comando de la consigna, este archivo se regenera en la raíz.
 /reporte.html
 /assets/
 
-# Capturas y logs de una corrida. La captura de un fallo queda en
+# Capturas y logs de una ejecución. La captura de un fallo queda en
 # reports/capturas/ para mirarla en la máquina.
 reports/capturas/*.png
 reports/*.log
