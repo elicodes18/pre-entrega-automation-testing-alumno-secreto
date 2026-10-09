@@ -1,6 +1,6 @@
-"""Crea el navegador y aplica esperas explícitas.
+"""Arma el navegador y las esperas explícitas.
 
-La consigna pide WebDriverWait. No se usan pausas fijas con time.sleep.
+La consigna pide WebDriverWait. No se usa time.sleep.
 """
 
 import os
@@ -21,10 +21,10 @@ RUTA_FIREFOX = Path("/Applications/Firefox.app/Contents/MacOS/firefox")
 
 
 def crear_driver():
-    """Abre Chrome, Brave o Firefox. Chrome tiene prioridad si está instalado.
+    """Abre Chrome, Brave o Firefox. Si hay Chrome, usa ese.
 
-    NAVEGADOR=chrome|brave|firefox fuerza uno.
-    MOSTRAR_NAVEGADOR=1 abre la ventana. Sin esa variable corre en segundo plano.
+    NAVEGADOR=chrome|brave|firefox elige uno.
+    MOSTRAR_NAVEGADOR=1 muestra la ventana. Si no está, la prueba corre sin ventana.
     """
     pedido = os.getenv("NAVEGADOR", "auto").strip().lower()
     mostrar = _quiere_ver_el_navegador()
@@ -52,7 +52,7 @@ def crear_driver():
     if _hay_firefox():
         return _crear_firefox(mostrar)
     raise RuntimeError(
-        "No se encontró Chrome, Brave ni Firefox. Instalá uno para correr las pruebas."
+        "No hay Chrome, Brave ni Firefox. Instalá uno para correr las pruebas."
     )
 
 

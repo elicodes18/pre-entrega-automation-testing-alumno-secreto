@@ -1,4 +1,4 @@
-"""Lee los datos externos del login (URL y credenciales de demostración)."""
+"""Lee la URL y las credenciales de la demo, guardadas en datos/."""
 
 import json
 from pathlib import Path
@@ -8,6 +8,6 @@ RUTA_CREDENCIALES = RAIZ_PROYECTO / "datos" / "credenciales.json"
 
 
 def cargar_credenciales():
-    """Devuelve el diccionario con url_base, usuario y contrasena."""
+    """Devuelve url_base, usuario y contrasena."""
     with RUTA_CREDENCIALES.open(encoding="utf-8") as archivo:
         return json.load(archivo)

@@ -1,7 +1,7 @@
-"""Punto de entrada que pide la consigna para el reporte HTML.
+"""Archivo de entrada que indica la consigna para el reporte HTML.
 
-Los casos están en tests/ y las acciones en utils/. Este archivo los
-reúne para poder correr:
+Los casos están en tests/ y las funciones auxiliares, en utils/.
+Desde este módulo se corre:
 
     pytest pre-entrega-final/test_saucedemo.py -v --html=reporte.html --self-contained-html
 """
@@ -27,40 +27,40 @@ from tests.test_login import test_login_redirige_al_inventario as _login_url
 
 
 def test_login_redirige_al_inventario(driver, credenciales):
-    """Ingresa con standard_user y comprueba la redirección a inventory.html."""
+    """Entra con standard_user y verifica el paso a inventory.html."""
     _login_url(driver, credenciales)
 
 
 def test_login_muestra_products_y_swag_labs(driver, credenciales):
-    """Valida el encabezado Products y la marca Swag Labs después del login."""
+    """Después del login, comprueba Products y Swag Labs."""
     _login_textos(driver, credenciales)
 
 
 def test_titulo_de_inventario_es_correcto(driver_logueado):
-    """El título de la pestaña es Swag Labs y el de la sección es Products."""
+    """La pestaña dice Swag Labs y la sección, Products."""
     _titulo(driver_logueado)
 
 
 def test_hay_productos_visibles(driver_logueado):
-    """Comprueba que haya al menos un producto visible en el inventario."""
+    """Comprueba que haya al menos un producto a la vista."""
     _hay_productos(driver_logueado)
 
 
 def test_menu_filtro_y_carrito_estan_visibles(driver_logueado):
-    """Valida el menú, el filtro de orden y el acceso al carrito."""
+    """Comprueba el menú, el filtro de orden y el acceso al carrito."""
     _interfaz(driver_logueado)
 
 
 def test_primer_producto_tiene_nombre_y_precio(driver_logueado):
-    """Lista en el reporte el nombre y el precio del primer producto."""
+    """Deja en el reporte el nombre y el precio del primer producto."""
     _primer_producto(driver_logueado)
 
 
 def test_agregar_primer_producto_incrementa_el_contador(driver_logueado):
-    """El badge del carrito queda en 1 al agregar el primer producto."""
+    """Al agregar el primer producto, el contador del carrito queda en 1."""
     _agregar(driver_logueado)
 
 
 def test_producto_agregado_aparece_en_el_carrito(driver_logueado):
-    """El producto agregado figura en cart.html con el mismo nombre y precio."""
+    """El producto agregado aparece en cart.html, con el mismo nombre y el mismo precio."""
     _en_carrito(driver_logueado)

@@ -1,4 +1,7 @@
-"""Fixtures compartidas. Cada prueba abre y cierra su propio navegador."""
+"""Cada prueba abre su navegador y lo cierra al terminar.
+
+Si la prueba falla, la captura queda en reports/capturas/.
+"""
 
 from pathlib import Path
 
@@ -26,7 +29,7 @@ def driver():
 
 @pytest.fixture
 def driver_logueado(driver, credenciales):
-    """Entra al inventario. Lo usan el catálogo y el carrito, no el test de login."""
+    """Deja la sesión en el inventario. El login no lo usa: tiene que probar el ingreso."""
     abrir_login(driver, credenciales["url_base"])
     iniciar_sesion(driver, credenciales["usuario"], credenciales["contrasena"])
     return driver
@@ -34,7 +37,7 @@ def driver_logueado(driver, credenciales):
 
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item, call):
-    """Si una prueba falla, guarda una captura en reports/capturas/."""
+    """Guarda una captura en reports/capturas/ cuando la prueba falla."""
     resultado = yield
     reporte = resultado.get_result()
     if reporte.when != "call" or not reporte.failed:

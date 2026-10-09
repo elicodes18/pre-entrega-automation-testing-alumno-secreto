@@ -4,7 +4,7 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 
-# Copia local de la consigna. No forma parte de la entrega.
+# Copia local de la consigna. No entra en la entrega.
 instrucciones.pdf
 
 # El reporte versionado es reports/reporte.html.
@@ -12,7 +12,7 @@ instrucciones.pdf
 /reporte.html
 /assets/
 
-# Capturas y logs se generan al ejecutar. Las capturas de un fallo
-# quedan en reports/capturas/ para revisarlas en la máquina local.
+# Capturas y logs de una corrida. La captura de un fallo queda en
+# reports/capturas/ para mirarla en la máquina.
 reports/capturas/*.png
 reports/*.log

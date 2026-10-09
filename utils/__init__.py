@@ -1,1 +1,1 @@
-"""Funciones auxiliares del proyecto: configuración, navegador y acciones de SauceDemo."""
+"""Funciones auxiliares: configuración, navegador y acciones sobre SauceDemo."""
