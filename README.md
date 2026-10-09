@@ -125,6 +125,8 @@ Las credenciales no son un secreto: son el usuario público de la demo de Sauce 
 
 ## Anonimato de los commits
 
-Hace más de diez años que evito publicar datos personales en GitHub, y no voy a empezar ahora. Lo que había que aclarar ya está en las notas de AV: el profesor las vio.
+Hola, como estas? Hace más de diez años que evito publicar datos personales en GitHub, y prefiero no empezar ahora. 
 
 Por eso esta pre-entrega figura a nombre de **Alumno Secreto** (`alumno.secreto@anon.local`), con un correo que no es personal. Esa identidad está configurada solo en esta carpeta y no cambia la de Git en el resto de la máquina.
+
+Lo que había que aclarar ya está en las notas de AV: el profesor las vio. todo bien, saluditos
